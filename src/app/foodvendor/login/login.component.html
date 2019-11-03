@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Sign In</h5>
+          <form class="form-signin"
+                #loginForm="ngForm"
+                (ngSubmit)="onSubmitloginForm(loginForm)"
+                 novalidate>
+            <div class="form-label-group">
+              <label for="inputEmail">Email address</label>
+              <input type="email"
+                     id="inputEmail"
+                     name="inputEmail"
+                     class="form-control"
+                     [(ngModel)]="user.userName"
+                     #inputEmail="ngModel"
+                     [ngClass]="{ 'is-invalid': loginForm.submitted && inputEmail.invalid }"
+                     required/>
+            </div>
+
+            <div class="form-label-group">
+              <label for="inputPassword">Password</label>
+              <input type="password"
+                     id="inputPassword"
+                     class="form-control"
+                     name="inputPassword"
+                     [(ngModel)]="user.passWord"
+                     #inputPassword="ngModel"
+                     [ngClass]="{ 'is-invalid': loginForm.submitted && inputPassword.invalid }"
+                     required>
+            </div>
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox"
+                        class="custom-control-input"
+                        id="readTermCondition"
+                        #readTermCondition="ngModel"
+                        name="readTermCondition"
+                        [(ngModel)]="user.isAdmin"
+                        [ngClass]="{ 'is-invalid': loginForm.submitted && readTermCondition.invalid }"
+                        required>
+                <label class="custom-control-label" for="readTermCondition">Is Admin</label>
+              </div>
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+    <div class="card card-signin my-5">
+      <div class="card-body">
+        <h5 class="card-title text-center">Add Main Course Menu</h5>
+        <form class="form-signin"
+              #mainCourseForm="ngForm"
+              (ngSubmit)="mainCourseForm.form.valid && addMainCourse(mainCourseForm)"
+              novalidate>
+          <div class="form-group">
+            <label for="CategoryOFMainCourse">Select Category</label>
+            <select class="form-control"
+                    id="CategoryOFMainCourse"
+                    name="CategoryOFMainCourse"
+                    [(ngModel)]="mainCourseMenuForm.categoryOfMainCourceMenu"
+                    #CategoryOFMainCourse="ngModel"
+                    [ngClass]="{ 'is-invalid': mainCourseForm.submitted && CategoryOFMainCourse.invalid }"
+                    required
+                    >
+              <option>Curry and Dal</option>
+              <option>Rice and Biryani</option>
+              <option>Breads</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inputCourseMenuName">Name</label>
+            <input type="text"
+                   id="inputCourseMenuName"
+                   class="form-control"
+                   name="inputCourseMenuName"
+                   [(ngModel)]="mainCourseMenuForm.mainCourseMenuName"
+                   #inputCourseMenuName="ngModel"
+                   [ngClass]="{ 'is-invalid': mainCourseForm.submitted && inputCourseMenuName.invalid }"
+                   required>
+          </div>
+          <div class="form-group">
+            <label for="inputCourseMenuPrice">Price</label>
+            <input type="text"
+                   id="inputCourseMenuPrice"
+                   class="form-control"
+                   name="inputCourseMenuPrice"
+                   [(ngModel)]="mainCourseMenuForm.mainCourseMenuPrice"
+                   #inputCourseMenuPrice="ngModel"
+                   [ngClass]="{ 'is-invalid': mainCourseForm.submitted && inputCourseMenuPrice.invalid }"
+                   required>
+          </div>
+          <div class="form-group">
+              <label for="inputMainCourseMenuDate">Create Date</label>
+              <input type="date"
+                     id="inputMainCourseMenuDate"
+                    class="form-control"
+                    name="inputMainCourseMenuDate"
+                    [(ngModel)]="mainCourseMenuForm.mainCourseMenuCreatedDate"
+                    #inputMainCourseMenuDate="ngModel"
+                    [ngClass]="{ 'is-invalid': mainCourseForm.submitted && inputMainCourseMenuDate.invalid }"
+                    required>
+          </div>
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox"
+                   class="custom-control-input"
+                   id="vegCheck"
+                   name="vegCheck"
+                   [(ngModel)]="mainCourseMenuForm.isVeg"
+                   #vegCheck="ngModel"
+                   [ngClass]="{ 'is-invalid': mainCourseForm.submitted && vegCheck.invalid }">
+            <label class="custom-control-label" for="vegCheck">Veg</label>
+          </div>
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox"
+                   class="custom-control-input"
+                   id="nonVegCheck"
+                   name="nonVegCheck"
+                   [(ngModel)]="mainCourseMenuForm.isNonVeg"
+                   #nonVegCheck="ngModel"
+                   [ngClass]="{ 'is-invalid': mainCourseForm.submitted && nonVegCheck.invalid }">
+            <label class="custom-control-label" for="nonVegCheck">Non-Veg</label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

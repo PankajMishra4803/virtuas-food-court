@@ -1,0 +1,48 @@
+span.addandminusbtn{
+    border: 1px solid #007b5e;
+    border: 1px solid #007b5e;
+    border-radius: 17px;
+    padding: 2px;
+}
+.mat-icon{
+    text-align: center;
+}
+input[type="text"] {
+    background-color: green;
+    color: white;
+    border:none;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .txt-w{
+        width: 29%
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .txt-w{
+        width: 29%
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .txt-w{
+        width: 38%
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .txt-w{
+        width: 38%
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .txt-w{
+        width: 28%
+    }
+}

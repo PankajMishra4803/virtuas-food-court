@@ -1,0 +1,9 @@
+span.badge.adjust-badge {
+    float: right;
+    margin-top: 22px;
+    padding: 1px 1px 1px 1px;
+    border-radius: -8px;
+}
+.clickBtn{
+    cursor: pointer;
+}

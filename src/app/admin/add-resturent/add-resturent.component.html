@@ -1,0 +1,89 @@
+<div class="row">
+  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+    <div class="card card-signin my-5">
+      <div class="card-body">
+        <h5 class="card-title text-center">Add Resturent</h5>
+        <form class="form-signin" #resturentAddForm="ngForm"
+          (ngSubmit)="resturentAddForm.form.valid && addResturentForm(resturentAddForm)" novalidate>
+          <div class="form-group">
+            <label for="CategoryOFDesert">Select Category</label>
+            <select class="form-control" id="CategoryOFResturent" name="categoryOFResturent"
+              #CategoryOFResturent="ngModel" [(ngModel)]="resturentForm.categoryOFResturent"
+              [ngClass]="{ 'is-invalid': resturentAddForm.submitted && CategoryOFResturent.invalid }" required>
+              <option>Veg</option>
+              <option>No-Veg</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inputReturentName">ReturentName</label>
+            <input type="text" id="inputReturentName" class="form-control" name="inputReturentName"
+              #inputReturentName="ngModel" [(ngModel)]="resturentForm.returentName"
+              [ngClass]="{ 'is-invalid': resturentAddForm.submitted && inputReturentName.invalid }" required>
+          </div>
+          <div class="form-group">
+            <label for="inputImage">Image</label>
+            <input type="text" id="inputImage" class="form-control" name="inputImage" #inputImage="ngModel"
+              [(ngModel)]="resturentForm.resturentImage"
+              [ngClass]="{ 'is-invalid': resturentAddForm.submitted && inputImage.invalid }" required>
+          </div>
+          <div class="form-group">
+            <label for="inputCostPerson">Cost Person</label>
+            <input type="text"
+                  id="inputCostPerson"
+                  class="form-control"
+                  name="inputCostPerson"
+                  #inputCostPerson="ngModel"
+                  [(ngModel)]="resturentForm.costPerson"
+                  [ngClass]="{ 'is-invalid': resturentAddForm.submitted && inputCostPerson.invalid }"
+                  required>
+          </div>
+          <div class="form-group">
+              <label for="inputEstimateTime">Estimate Time</label>
+              <input type="text"
+                    id="inputEstimateTime"
+                    class="form-control"
+                    name="inputEstimateTime"
+                    #inputEstimateTime="ngModel"
+                    [(ngModel)]="resturentForm.estimateTime"
+                    [ngClass]="{ 'is-invalid': resturentAddForm.submitted && inputEstimateTime.invalid }"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="inputMinPrice">Min Price</label>
+                <input type="text"
+                      id="inputMinPrice"
+                      class="form-control"
+                      name="inputMinPrice"
+                      #inputMinPrice="ngModel"
+                      [(ngModel)]="resturentForm.minPrice"
+                      [ngClass]="{ 'is-invalid': resturentAddForm.submitted && inputMinPrice.invalid }"
+                      required>
+              </div>
+              <div class="form-group">
+                  <label for="inputstartDate">Start Date</label>
+                  <input type="date"
+                        id="inputstartDate"
+                        class="form-control"
+                        name="inputstartDate"
+                        #inputstartDate="ngModel"
+                        [(ngModel)]="resturentForm.startDate"
+                        [ngClass]="{ 'is-invalid': resturentAddForm.submitted && inputstartDate.invalid }"
+                        required>
+                </div>
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox"
+                    class="custom-control-input"
+                    id="readTermCondition"
+                    #readTermCondition="ngModel"
+                    name="readTermCondition"
+                    [(ngModel)]="resturentForm.readTemCondition"
+                    [ngClass]="{ 'is-invalid': resturentAddForm.submitted && readTermCondition.invalid }"
+                    required>
+            <label class="custom-control-label" for="readTermCondition"><a href="#">Read term & Condition</a></label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

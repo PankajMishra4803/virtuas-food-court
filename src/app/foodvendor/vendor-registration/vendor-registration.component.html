@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-lg-10 col-xl-9 mx-auto">
+    <div class="card card-signin flex-row my-5">
+      <div class="card-img-left d-none d-md-flex">
+        <!-- Background image for card set in CSS! -->
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center">Register</h5>
+        <form class="form-signin"
+              #registrationForm="ngForm"
+              (ngSubmit)="onSubmitRegistration(registrationForm)"
+              novalidate>
+          <div class="form-group">
+            <label for="userName">UserName</label>
+            <input type="text"
+                   class="form-control"
+                   name="userName"
+                   id="userName"
+                   [(ngModel)]="userRegistration.userName"
+                   #userName="ngModel"
+                   [ngClass]="{ 'is-invalid': registrationForm.submitted && userName.invalid }"
+                   required
+                   />
+          </div>
+          <div class="form-group">
+            <label for="userEmail">Email</label>
+            <input type="email"
+                   class="form-control"
+                   name="userEmail"
+                   id="userEmail"
+                   [(ngModel)]="userRegistration.email"
+                   #userEmail="ngModel"
+                   [ngClass]="{ 'is-invalid': registrationForm.submitted && userEmail.invalid }"
+                   required/>
+          </div>
+          <div class="form-group">
+            <label for="mobileNumber">Number</label>
+            <input type="text"
+                   class="form-control"
+                   name="mobileNumber"
+                   id="mobileNumber"
+                   [(ngModel)]="userRegistration.mobileNumber"
+                   #mobileNumber="ngModel"
+                   [ngClass]="{ 'is-invalid': registrationForm.submitted && mobileNumber.invalid }"
+                   required/>
+          </div>
+           <div class="custom-control custom-checkbox mb-1">
+            <input type="checkbox"
+                    class="custom-control-input"
+                    id="readTermCondition"
+                    #readTermCondition="ngModel"
+                    name="readTermCondition"
+                    [(ngModel)]="userRegistration.isAdmin"
+                    [ngClass]="{ 'is-invalid': registrationForm.submitted && readTermCondition.invalid }"
+                    required>
+            <label class="custom-control-label" for="readTermCondition">Is Admin</label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
+          <a class="d-block text-center mt-2 small" [routerLink]="['/login']">Sign In</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

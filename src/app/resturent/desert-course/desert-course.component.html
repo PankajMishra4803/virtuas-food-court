@@ -1,0 +1,145 @@
+<div class="form-group p-3">
+        <mat-accordion>
+            <mat-expansion-panel  [expanded]="step === 0" (opened)="setStep(0)">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>Sweet</mat-panel-title>
+                </mat-expansion-panel-header>
+                <span class="badge badge-success p-2">Sweet Items</span>
+                <ul class="list-group p-1">
+                    <li class="list-group-item">
+                        <div class="float-left">
+                            <p>Bread Halwa</p>
+                            <span>₹125.00
+                                </span>
+                        </div>                                       
+                        <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " (click)="addItemInCart()" value="Add"/>    
+                    </li>
+                    <li class="list-group-item">
+                        <div class="float-left">
+                            <p>Gulab Jamoon [2 Pieces]</p>
+                            <span>₹110.00</span>
+                        </div>                                       
+                        <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                       </li>
+                    <li class="list-group-item">
+                        <div class="float-left">
+                            <p>Buttery Raspberry Crumble Bars</p>
+                            <span>₹105.00</span>
+                        </div> 
+                        <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                    </li>
+                    <li class="list-group-item">
+                        <div class="float-left">
+                                    <p>Mint Oreo Cake</p>
+                                    <span>₹155.00</span>
+                        </div> 
+                        <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                    </li>
+                    <li class="list-group-item">
+                        <div class="float-left">
+                                    <p>Ultimate Gooey Brownies</p>
+                                    <span>₹145.00</span>
+                        </div> 
+                        <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                    </li>
+                    
+                </ul>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Ice Creams</mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <span class="badge badge-success p-2">Ice Creams Items</span>
+                    <ul class="list-group p-1">
+                            <li class="list-group-item">
+                                <div class="float-left">
+                                    <p>Royal Vanilla Ice Cream Cup</p>
+                                    <span>₹15.00 </span>
+                                       
+                                </div>                                       
+                                <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                            </li>
+                            <li class="list-group-item">
+                                <div class="float-left">
+                                    <p>Vanilla Ice Cream Cup</p>
+                                    <span>₹15.00</span>
+                                </div>                                       
+                                <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                               </li>
+                            <li class="list-group-item">
+                                <div class="float-left">
+                                    <p>Fruit-Ice-Cream</p>
+                                    <span>₹175.00 </span>
+                                       
+                                </div> 
+                                <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                            </li>
+                            <li class="list-group-item">
+                                <div class="float-left">
+                                            <p>Butter-Scotch-Ice-Cream</p>
+                                            <span>₹165.00</span>
+                                              
+                                </div> 
+                                <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                            </li>
+                            <li class="list-group-item">
+                                <div class="float-left">
+                                            <p>Falooda-Ice-Cream</p>
+                                            <span>₹145.00</span>
+                                </div> 
+                                <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                            </li>
+                            
+                        </ul>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Juice</mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <span class="badge badge-success p-2">Juice Items</span>
+                    <ul class="list-group p-1">
+                            <li class="list-group-item">
+                                <div class="float-left">
+                                    <p>Lemon Soda</p>
+                                    <span>₹75.00 </span>
+                                       
+                                </div>                                       
+                                <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                            </li>
+                            <li class="list-group-item">
+                                <div class="float-left">
+                                    <p>Orange Juice</p>
+                                    <span>₹80.00
+                                        </span>
+                                </div>                                       
+                                <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                               </li>
+                            <li class="list-group-item">
+                                <div class="float-left">
+                                    <p>Lassi</p>
+                                    <span>₹95.00 </span>
+                                       
+                                </div> 
+                                <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                            </li>
+                            <li class="list-group-item">
+                                <div class="float-left">
+                                            <p>Water Melon Juice</p>
+                                            <span>₹90.00</span>
+                                              
+                                </div> 
+                                <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                            </li>
+                            <li class="list-group-item">
+                                <div class="float-left">
+                                            <p>Pomegranate Juice</p>
+                                            <span>₹105.00</span>
+                                </div> 
+                                <input type="button" class="btn btn-outline-primary btn-sm ml-3 float-right " value="Add"/>    
+                            </li>
+                            
+                        </ul>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+    </div>

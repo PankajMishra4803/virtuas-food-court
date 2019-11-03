@@ -1,0 +1,35 @@
+<div class="col-md-12">
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
+    <a class="navbar-brand" [routerLink]="['/home']">VirtualFoodCounter</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navb" class="navbar-collapse collapse hide">
+      <ul class="navbar-nav" *ngIf="isAdmin">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/addResturent']" >Admin</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="void()">Vendor<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a [routerLink]="['/addStarter']" class="dropdown-item">Add Starter Menu</a></li>
+            <li><a [routerLink]="['/addMainCourse']" class="dropdown-item">Add Maincourse Menu</a></li>
+            <li><a [routerLink]="['/addDesert']" class="dropdown-item">Add Desert Menu</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/registrantion']" routerLinkActive="router-link-active" ><span class="fas fa-user" ></span>Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" ><span class="fas fa-sign-in-alt"></span> Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/order/cart']" routerLinkActive="router-link-active" ><span class="fas fa-shopping-cart"></span> Cart</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+</div>

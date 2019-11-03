@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                    Add Delivery Address
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validFullAddress">Delivery Address</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="validFullAddress" placeholder="deliver address" aria-describedby="inputGroupPrepend2" required>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="fullAddress"><i class="material-icons">location_searching</i></span>
+                                </div>                                           
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                                <label for="firstName">First name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                                <label for="lastName">Last name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                                <label for="emailId">Email</label>
+                                <input type="text" class="form-control" id="emailId" placeholder="Email Id" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                                <label for="mobileNo">Mobile No</label>
+                                <input type="text" class="form-control" id="mobileNo" placeholder="Mobile No" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                                <label for="wantTo">Want to:</label>
+                                <section class="example-section">
+                                        <mat-checkbox class="example-margin" color="primary">Home/Office Deliver</mat-checkbox><span>&nbsp;</span>
+                                        <mat-checkbox class="example-margin" color="primary">Pick Up</mat-checkbox>
+                                </section>
+                                
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div mat-dialog-actions>
+                <button mat-button (click)="onNoClick()">No Thanks</button>
+                <button mat-button cdkFocusInitial>Ok</button>
+        </div>
+    </div>
+</div>
